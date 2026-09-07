@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "skipLibCheck": false,
+    "noEmit": true,
+    "types": ["node"],
+    "ignoreDeprecations": "6.0"
+  },
+  "include": ["."],
+  // feedback-to-notion.ts uses Bun globals (Bun.serve); excluded from the typecheck so the
+  // examples need no @types/bun dependency. It still runs via `bun run examples/feedback-to-notion.ts`.
+  "exclude": ["feedback-to-notion.ts"]
+}
